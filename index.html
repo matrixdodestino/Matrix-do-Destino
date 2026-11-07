@@ -387,6 +387,23 @@
   .fade{opacity:0; animation:fade .7s ease forwards; animation-delay:var(--d,0s);}
   @keyframes fade{to{opacity:1}}
   @keyframes breathe{0%,100%{transform:scale(1)} 50%{transform:scale(1.045)}}
+
+/* ===== DENTRO DA LEITURA (páginas em leque) ===== */
+.dentro-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,70px);align-items:start}
+@media(max-width:900px){.dentro-grid{grid-template-columns:1fr}}
+.leque{position:relative;aspect-ratio:1/0.92;max-width:560px;width:100%;margin:0 auto}
+@media(min-width:901px){.leque{position:sticky;top:110px;margin-top:30px}}
+.leque img{position:absolute;width:56%;height:auto;border-radius:6px;box-shadow:0 26px 50px -22px rgba(42,27,61,.5);border:1px solid rgba(91,46,140,.14)}
+.leque .f1{left:22%;top:0;z-index:3}
+.leque .f2{left:0;top:60px;transform:rotate(-7deg);z-index:2}
+.leque .f3{right:0;top:60px;transform:rotate(7deg);z-index:1}
+.leque .selo-pdf{position:absolute;z-index:4;right:4%;bottom:2%;background:var(--ink);color:var(--cream);border-radius:999px;padding:9px 16px;font-family:"Jost",system-ui,sans-serif;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 14px 30px -18px rgba(42,27,61,.6)}
+.caps{list-style:none;padding:0;margin:4px 0 0;counter-reset:c}
+.caps li{counter-increment:c;display:flex;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line)}
+.caps li::before{content:counter(c,upper-roman);flex:0 0 44px;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:700;color:var(--rose);font-size:18px}
+.caps b{font-family:"Jost",system-ui,sans-serif;font-weight:500;color:var(--ink);font-size:16px}
+.caps span{display:block;font-size:17px;color:var(--soft);line-height:1.4}
+.dentro-nota{margin:16px 0 0;font-family:"Jost",system-ui,sans-serif;font-size:14px;color:var(--faint)}
 </style>
 </head>
 <body>
@@ -503,6 +520,38 @@
         <p class="pn">Passo 03</p>
         <h3>Recebe o PDF</h3>
         <p>Em um a dois dias a leitura chega em PDF pelo WhatsApp, pronta para ler no celular ou imprimir. Fica sua para sempre, para reler quando quiser.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DENTRO DA LEITURA ============ -->
+  <section class="sec" id="dentro">
+    <div class="dentro-grid">
+      <div class="leque" aria-label="Páginas de exemplo da Matriz do Destino Completa em PDF">
+        <img class="f2" src="leitura-matriz.jpg" alt="Página com a matriz calculada" loading="lazy" width="640" height="905">
+        <img class="f3" src="leitura-previsoes.jpg" alt="Capítulo de previsões para os próximos anos" loading="lazy" width="640" height="905">
+        <img class="f1" src="leitura-capa.jpg" alt="Capa de uma leitura da Matriz do Destino Completa" loading="lazy" width="640" height="905">
+        <span class="selo-pdf">PDF · exemplo</span>
+      </div>
+      <div>
+        <div class="sec-head" style="margin-bottom:22px">
+          <p class="sec-eyebrow">Por dentro da Matriz Completa</p>
+          <h2 class="sec-title">O seu mapa inteiro, <span class="acento">zona por zona</span></h2>
+          <p class="sub">Cerca de 24 páginas com o seu nome na capa, a sua matriz desenhada para a sua data e cada capítulo escrito a partir dos arcanos que ela revelou.</p>
+        </div>
+        <ol class="caps">
+          <li><div><b>Sua vida passada</b><span>A cauda cármica e como curá-la.</span></div></li>
+          <li><div><b>Sua vida atual</b><span>O arcano que rege a sua essência.</span></div></li>
+          <li><div><b>Sua energia anual</b><span>O ciclo que você está vivendo agora.</span></div></li>
+          <li><div><b>Sua vida amorosa</b><span>Com ou sem relacionamento, e o par que o seu mapa descreve.</span></div></li>
+          <li><div><b>Sua carreira</b><span>O trabalho, o dinheiro e o que pede cuidado.</span></div></li>
+          <li><div><b>Seu karma material</b><span>A herança que você carrega em relação ao dinheiro.</span></div></li>
+          <li><div><b>Karma materno e paterno</b><span>O que veio de cada uma das suas linhagens.</span></div></li>
+          <li><div><b>Sua zona de retrato</b><span>A impressão que você causa nas pessoas.</span></div></li>
+          <li><div><b>Os desejos da sua alma</b><span>O material e o espiritual.</span></div></li>
+          <li><div><b>Previsões para os próximos anos</b><span>Os ciclos que se abrem, idade por idade.</span></div></li>
+        </ol>
+        <p class="dentro-nota">Alma Gêmea, Talentos, Matriz do Ano e Linha da Carreira seguem o mesmo estilo, focadas em uma linha do seu mapa.</p>
       </div>
     </div>
   </section>
