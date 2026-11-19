@@ -404,6 +404,66 @@
 .caps b{font-family:"Jost",system-ui,sans-serif;font-weight:500;color:var(--ink);font-size:16px}
 .caps span{display:block;font-size:17px;color:var(--soft);line-height:1.4}
 .dentro-nota{margin:16px 0 0;font-family:"Jost",system-ui,sans-serif;font-size:14px;color:var(--faint)}
+
+  /* ============ COMPATIBILIDADE ============ */
+  .cp-sec{scroll-margin-top:80px;}
+  .cp-form{background:rgba(255,253,248,.82); border:1px solid var(--line); border-radius:16px; padding:clamp(18px,3.4vw,30px); max-width:860px; margin:0 auto;}
+  .cp-pares{display:grid; grid-template-columns:1fr auto 1fr; gap:16px; align-items:stretch;}
+  .cp-pessoa{border:1px solid var(--line); border-radius:12px; padding:16px 16px 18px; background:rgba(255,255,255,.6); display:flex; flex-direction:column; gap:12px;}
+  .cp-pessoa .cp-quem{font-family:"Jost",system-ui,sans-serif; font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--rose); margin:0;}
+  .cp-pessoa .field{min-width:0; flex:none;}
+  .cp-datas{display:grid; grid-template-columns:.9fr 1.5fr 1.1fr; gap:10px;}
+  .cp-e{align-self:center; font-family:"EB Garamond",Georgia,serif; font-style:italic; font-size:44px; line-height:1; color:var(--rose);}
+  .cp-form .btn{display:block; width:100%; margin-top:20px; text-align:center;}
+  .cp-form .confianca{justify-content:center;}
+  #cpResult{display:none; padding-top:clamp(36px,5vw,56px); max-width:860px; margin:0 auto; scroll-margin-top:70px;}
+  #cpResult.show{display:block; animation:cpEntra .7s ease both;}
+  @keyframes cpEntra{from{opacity:0; transform:translateY(14px)} to{opacity:1; transform:none}}
+  .cp-head{text-align:center; margin-bottom:18px;}
+  .cp-titulo{font-family:"EB Garamond",Georgia,serif; font-style:italic; font-weight:700; font-size:clamp(28px,5vw,40px); color:var(--violet); margin:0 0 6px; line-height:1.1;}
+  .cp-datas-txt{font-family:"Jost",system-ui,sans-serif; font-size:13px; letter-spacing:.04em; color:var(--faint); margin:0;}
+  .cp-datas-txt b{color:var(--ink); font-weight:500;}
+  .cp-chart{background:rgba(255,253,248,.85); border:1px solid var(--line); border-radius:16px; padding:12px; max-width:520px; margin:0 auto;}
+  .cp-chart svg{display:block; width:100%; height:auto;}
+  .cp-no{opacity:0; animation:cpNo .45s ease forwards;}
+  @keyframes cpNo{from{opacity:0} to{opacity:1}}
+  .cp-legenda{display:flex; flex-wrap:wrap; gap:8px 18px; justify-content:center; margin:14px 0 0; font-family:"Jost",system-ui,sans-serif; font-size:12.5px; color:var(--soft);}
+  .cp-legenda span{display:flex; align-items:center; gap:7px;}
+  .cp-legenda i{width:11px; height:11px; border-radius:50%; display:block; border:1px solid rgba(91,46,140,.25);}
+  .cp-hint{font-family:"EB Garamond",serif; font-style:italic; color:var(--faint); text-align:center; font-size:16.5px; max-width:56ch; margin:14px auto 30px;}
+  .cp-blocos .lblock{margin-left:auto; margin-right:auto; max-width:62ch;}
+  .cp-borrao{margin:12px 0 0; display:grid; gap:8px;}
+  .cp-borrao i{display:block; height:9px; border-radius:5px; background:linear-gradient(90deg,rgba(91,46,140,.16),rgba(221,95,149,.12)); filter:blur(1.2px);}
+  .cp-borrao i:nth-child(2){width:92%} .cp-borrao i:nth-child(3){width:74%}
+  .cp-segue{font-family:"EB Garamond",serif; font-style:italic; color:var(--faint) !important; font-size:16px !important; margin-top:12px !important;}
+  .cp-karmas{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:8px;}
+  .cp-karma p{margin:0;}
+  .cp-karma .cp-kq{font-family:"Jost",sans-serif; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--faint);}
+  .cp-karma .cp-kn{font-family:"Playfair Display","EB Garamond",Georgia,serif; font-style:italic; font-weight:600; font-size:21px; color:var(--violet); margin:2px 0 6px;}
+  .cp-karma .cp-kn span{font-family:"Jost",sans-serif; font-style:normal; font-weight:500; font-size:12px; color:var(--rose); letter-spacing:.06em; margin-left:4px;}
+  .cp-mais{margin:40px auto 0; max-width:760px;}
+  .cp-trancas{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:14px; margin-top:14px;}
+  .cp-tranca{border:1px dashed rgba(91,46,140,.32); border-radius:12px; padding:16px 16px 14px; background:rgba(241,235,250,.55);}
+  .cp-tranca p{margin:0;}
+  .cp-tz{font-family:"Jost",system-ui,sans-serif; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--rose);}
+  .cp-tv{margin-top:6px !important; display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;}
+  .cp-tn{font-family:"Jost",system-ui,sans-serif; font-weight:500; font-size:19px; color:var(--violet);}
+  .cp-ta{font-family:"EB Garamond",Georgia,serif; font-style:italic; font-size:18px; color:var(--ink);}
+  .cp-ts{font-family:"EB Garamond",serif; font-style:italic; color:var(--soft); font-size:16px; margin-top:4px !important;}
+  .cp-tl{display:flex; align-items:center; gap:6px; margin-top:12px !important; font-family:"Jost",system-ui,sans-serif; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--violet);}
+  .cp-tl svg{width:12px; height:12px; fill:currentColor;}
+  #cpResult .chamado{margin-top:44px;}
+  .cp-nota{font-family:"Jost",system-ui,sans-serif; font-size:13px; margin:16px 0 0 !important; opacity:.8;}
+  #cpResult .lblock p.lz{font-size:10.5px !important; line-height:1.5;}
+  #cpResult .cp-karma p.cp-kq{font-size:11px !important;}
+  #cpResult .cp-karma p.cp-kn{font-size:21px !important; line-height:1.25;}
+  .cp-karma .cp-kn span{white-space:nowrap;}
+  .sec.cp-sec .sec-head{margin-left:auto; margin-right:auto; text-align:center;}
+  @media (max-width:680px){
+    .cp-pares{grid-template-columns:1fr; gap:10px;}
+    .cp-e{justify-self:center; font-size:34px;}
+    .cp-karmas{grid-template-columns:1fr;}
+  }
 </style>
 </head>
 <body>
@@ -421,6 +481,7 @@
     <nav>
       <a href="#calculadora" class="opcional">Calculadora</a>
       <a href="#comofunciona" class="opcional">Como funciona</a>
+      <a href="#compatibilidade" class="opcional">Compatibilidade</a>
       <a href="#catalogo">Leituras</a>
       <a href="#" class="nav-cta" id="navCta" target="_blank" rel="noopener">Falar comigo</a>
     </nav>
@@ -554,6 +615,46 @@
         <p class="dentro-nota">Alma Gêmea, Talentos, Matriz do Ano e Linha da Carreira seguem o mesmo estilo, focadas em uma linha do seu mapa.</p>
       </div>
     </div>
+  </section>
+
+  <!-- ============ COMPATIBILIDADE ============ -->
+  <section class="sec cp-sec" id="compatibilidade">
+    <div class="sec-head">
+      <p class="sec-eyebrow">Calculadora do casal · gratuita</p>
+      <h2 class="sec-title">A <span class="acento">compatibilidade</span> de vocês</h2>
+      <p class="sub">Duas datas de nascimento formam um terceiro mapa: a matriz da própria relação. Coloque as duas e veja a energia no centro do vínculo, por que vocês se cruzaram e o karma que cada pessoa traz.</p>
+    </div>
+    <div class="cp-form" id="cpBox">
+      <div class="cp-pares">
+        <div class="cp-pessoa">
+          <p class="cp-quem">Você</p>
+          <div class="field"><label for="cpan">Nome (opcional)</label><input type="text" id="cpan" placeholder="seu primeiro nome" autocomplete="off"></div>
+          <div class="cp-datas">
+            <div class="field"><label for="cpad">Dia</label><select id="cpad"></select></div>
+            <div class="field"><label for="cpam">Mês</label><select id="cpam"></select></div>
+            <div class="field"><label for="cpay">Ano</label><select id="cpay"></select></div>
+          </div>
+        </div>
+        <span class="cp-e" aria-hidden="true">&amp;</span>
+        <div class="cp-pessoa">
+          <p class="cp-quem">A outra pessoa</p>
+          <div class="field"><label for="cpbn">Nome (opcional)</label><input type="text" id="cpbn" placeholder="o primeiro nome" autocomplete="off"></div>
+          <div class="cp-datas">
+            <div class="field"><label for="cpbd">Dia</label><select id="cpbd"></select></div>
+            <div class="field"><label for="cpbm">Mês</label><select id="cpbm"></select></div>
+            <div class="field"><label for="cpby">Ano</label><select id="cpby"></select></div>
+          </div>
+        </div>
+      </div>
+      <button class="btn" id="cpGo" type="button">Ver a compatibilidade</button>
+      <p class="err" id="cpErr"></p>
+      <div class="confianca">
+        <span><i></i>Cálculo gratuito</span>
+        <span><i></i>Sem cadastro</span>
+        <span><i></i>Resultado na hora</span>
+      </div>
+    </div>
+    <div id="cpResult" aria-live="polite"></div>
   </section>
 
   <!-- ============ CATÁLOGO ============ -->
@@ -1439,6 +1540,244 @@ document.getElementById('go').addEventListener('click',()=>{
 
 
 
+</script>
+<script>
+/* ============ COMPATIBILIDADE: calculadora do casal + prévia ============
+   Matriz do casal: os 8 pontos externos e o centro são a SOMA dos mesmos
+   pontos das duas matrizes, reduzida a 22; os internos saem do centro do
+   casal. Mesma regra do gerador da leitura (conferida com a Tamara). */
+(function(){
+const CFG = {
+  t:{
+    dia:'Dia', mes:'Mês', ano:'Ano',
+    meses:['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+    pessoaA:'você', pessoaB:'a outra pessoa',
+    errFalta:'Preencha as duas datas de nascimento.',
+    errDia:'Esse mês tem apenas {n} dias. Confira a data de {quem}.',
+    previaEyebrow:'A prévia de vocês',
+    titulo:'A matriz do casal',
+    tituloCom:'A matriz de {par}',
+    svgAria:'Octograma do casal na Matriz do Destino',
+    hint:'Cada número é um arcano, calculado a partir das duas datas somadas. Abaixo, uma prévia do que eles contam sobre vocês.',
+    lzCore:'Energia central · o coração do vínculo',
+    lzMet:'Por que vocês se cruzaram · o alto da matriz',
+    maisEyebrow:'Também na leitura completa',
+    naCompleta:'Na leitura completa'
+  },
+  teaser:{"core": {"1": "A relação de vocês nasceu para fazer as coisas acontecerem. O Mago no centro mostra que o casal rende mais quando está começando algo: um projeto, uma mudança, um plano para o ano, um jeito novo de viver. Lado a lado, vocês ficam mais capazes do que separadamente. Ideias que ficariam paradas num caderno ganham forma quando são conversadas a dois, e cada pessoa afia as habilidades da outra quase sem perceber.", "2": "A relação de vocês vive na profundidade. Com A Sacerdotisa no centro, o que une o casal é difícil de explicar para quem está de fora: um entendimento que acontece no silêncio, um jeito de saber o que a outra pessoa sente antes de qualquer palavra. É um casal de intuição. Vocês conseguem passar horas no mesmo cômodo sem conversar e, ainda assim, sentir uma proximidade enorme.", "3": "A relação de vocês veio para deixar a vida mais farta. A Imperatriz no centro traz calor, conforto e um talento natural para o cuidado. O casal transforma espaços comuns em lugares onde as pessoas querem ficar. A comida tem outro gosto na mesa de vocês, a casa tem cara de casa, e a relação tem uma generosidade que amigos e família percebem logo de cara.", "4": "A relação de vocês foi construída para durar. Com O Imperador no centro, o casal forma uma estrutura firme: planeja, protege o que tem e cresce passo a passo. Existe aqui uma sensação forte de segurança. Cada pessoa sente a outra como chão firme, e a relação dá a vocês estabilidade para assumir responsabilidades que pesariam demais para alguém sozinho.", "5": "A relação de vocês se apoia em valores em comum. O Hierofante no centro mostra que o casal se une por aquilo em que acredita: ideias sobre família, lealdade, fé, ética ou sobre o que é uma vida bem vivida. É um casal que leva o compromisso a sério. Promessas importam aqui, e importam também os rituais, as tradições e as pequenas cerimônias que marcam o tempo de vocês.", "6": "A relação de vocês é uma escolha, feita de novo e de novo. Com Os Enamorados no centro, o vínculo se apoia na harmonia, no afeto e na sensação de ter encontrado alguém que encaixa. É um casal do coração. Provavelmente vocês sentiram cedo que estar lado a lado fazia sentido de um jeito difícil de pôr em palavras, e essa sensação de acerto é a base de tudo o que constroem.", "7": "A relação de vocês foi feita para o movimento. O Carro no centro mostra que o casal está no seu melhor quando está indo para algum lugar: uma viagem, uma mudança, uma meta de carreira, um sonho perseguido a dois. Este casal tem impulso. Lado a lado, vocês encontram coragem para mudanças que ninguém enfrentaria sem companhia, e a relação costuma acelerar a vida das duas pessoas.", "8": "A relação de vocês se apoia na justiça. Com A Justiça no centro, o casal se une por um senso profundo de equilíbrio: o que se dá volta, os acordos são cumpridos e as necessidades de cada pessoa têm o mesmo peso. É um casal de honestidade. As coisas costumam ser claras entre vocês, e existe segurança justamente porque cada pessoa sabe onde está pisando.", "9": "A relação de vocês é um lugar de profundidade. O Eremita no centro mostra que o casal se une por uma busca interior: a vontade de entender a vida, a si e a outra pessoa além da superfície. É um casal que valoriza o sentido mais do que o barulho. Talvez vocês precisem de menos gente por perto do que a maioria, e um fim de semana tranquilo a dois provavelmente recarrega mais do que qualquer festa.", "10": "A relação de vocês é uma virada. Com A Roda da Fortuna no centro, o encontro mudou o rumo da vida das duas pessoas, e a relação segue girando em ciclos: fases de expansão e fases de pausa, sortes que chegam de repente e lições que voltam até serem aprendidas. É um casal de mudança. Nada entre vocês fica igual por muito tempo.", "11": "A relação de vocês é uma fonte de força. A Força no centro mostra que o casal ganha coragem lado a lado. É uma relação que resiste: provavelmente vocês já passaram por dificuldades que teriam desfeito outros casais e saíram delas com mais proximidade. Existe aqui paixão, vitalidade e uma lealdade profunda, que se sustenta quando as coisas apertam.", "12": "A relação de vocês pede um novo jeito de enxergar. Com O Enforcado no centro, o vínculo muda perspectivas. A convivência faz cada pessoa ver a vida de outro ângulo, questionar certezas antigas e descobrir que algumas coisas que pareciam essenciais importam bem menos do que se imaginava. É um casal de paciência e profundidade.", "13": "A relação de vocês é uma força de transformação. A Transformação no centro não fala de fim no sentido literal: mostra que o casal se encontrou para mudar. Ninguém aqui é a mesma pessoa de antes da relação, e o vínculo se renova através de viradas profundas. É um casal que troca de pele lado a lado.", "14": "A relação de vocês é um lugar de cura. Com A Temperança no centro, o casal leva equilíbrio para a vida das duas pessoas. Onde uma pessoa exagera, a outra suaviza; onde falta algo de um lado, o outro completa. É um casal de harmonia e paciência. As pessoas sentem calma perto de vocês, e a relação tem uma qualidade curativa que vocês provavelmente reconhecem.", "15": "A relação de vocês carrega uma carga poderosa. O Diabo no centro mostra que o vínculo é intenso e forte, e tende a trazer ambição material e sucesso no mundo. Lado a lado, vocês têm uma capacidade grande de realizar: dinheiro, influência e conforto chegam com mais facilidade quando o casal trabalha em equipe. É um casal com presença. As pessoas sentem a força do que vocês compartilham.", "16": "A relação de vocês é uma libertação. Com A Torre no centro, o encontro sacudiu as estruturas da vida das duas pessoas. Certezas antigas caíram, planos mudaram e cada pessoa descobriu verdades sobre si que estavam escondidas até então. É um casal de mudanças súbitas e de honestidade profunda. Nada falso sobrevive por muito tempo entre vocês.", "17": "A relação de vocês é uma fonte de esperança. A Estrela no centro mostra que o casal se inspira mutuamente. A dois, vocês sonham mais alto, acreditam no talento de quem está ao lado e enxergam na vida uma beleza que ninguém perceberia sozinho. É um casal de luz e criatividade. Quem passa um tempo com vocês costuma sair com mais leveza e mais esperança na própria vida.", "18": "A relação de vocês vive em águas profundas. Com A Lua no centro, o vínculo é emocional, intuitivo e rico em imaginação. Vocês se sentem com intensidade, sonham a dois e compartilham um mundo interior que pouca gente tem permissão de ver. É um casal de sensibilidade. Existe uma poesia no que vocês têm que é difícil pôr em palavras.", "19": "A relação de vocês é uma fonte de alegria. O Sol no centro mostra que o casal se ilumina mutuamente. Lado a lado, vocês ficam mais calorosos, mais confiantes e mais vivos. É um casal de celebração e clareza: as coisas costumam ficar às claras entre vocês, e a relação tem um brilho generoso que faz as pessoas gostarem de estar por perto.", "20": "A relação de vocês é um despertar. Com O Julgamento no centro, o encontro chamou as duas pessoas para uma nova etapa da vida. É um casal de renovação: vocês se ajudam a despertar para o que importa de verdade, a deixar padrões antigos para trás e a assumir uma versão mais autêntica de si. Existe também um tema forte de família aqui. A relação tende a aproximar famílias, curar laços antigos e dar um novo sentido às raízes.", "21": "A relação de vocês abre o mundo. O Mundo no centro mostra que o casal amplia os horizontes das duas pessoas. A dois, vocês viajam mais, conhecem mais gente, moram em mais lugares ou simplesmente enxergam a vida numa escala maior. É um casal de completude e liberdade. Cada pessoa se sente inteira na presença da outra, e a relação dá a vocês a sensação de que tudo é possível.", "22": "A relação de vocês nasceu para ser livre. O Louco no centro mostra que o casal se une pela leveza, pela espontaneidade e pelo gosto da aventura. É um casal que não gosta de roteiro rígido. Vocês ficam no seu melhor quando a vida surpreende: uma viagem sem planejamento, uma mudança de planos repentina, uma ideia que surge no jantar e vira projeto na semana seguinte. A dois, vocês se sentem com mais coragem, mais juventude e mais abertura para o mundo."}, "met": {"1": "Vocês se encontraram porque cada pessoa viu na outra a chance de criar algo novo. O Mago no alto mostra que esta relação é movida pela ação: planos, projetos e a empolgação de tirar ideias do papel. As primeiras conversas provavelmente estavam cheias de possibilidades, e essa faísca de iniciativa continua sendo o melhor combustível do casal.", "2": "Vocês se encontraram porque algo em cada pessoa reconheceu a outra em silêncio. A Sacerdotisa no alto mostra que a relação foi movida mais pela intuição do que pela lógica: uma sensação de familiaridade, de já se conhecerem de antes, que nenhuma explicação dá conta por inteiro.", "3": "Vocês se encontraram porque cada pessoa achou na outra um lugar para florescer. A Imperatriz no alto mostra que a relação é inspirada pelo cuidado, pela beleza e pelo prazer de uma vida boa. Desde o começo houve uma sensação de conforto, de receber acolhimento exatamente do jeito que se é.", "4": "Vocês se encontraram porque cada pessoa viu na outra um chão firme. O Imperador no alto mostra que a relação foi movida pela vontade de construir algo estável e duradouro. Provavelmente houve cedo uma sensação de segurança, a percepção de que dava para confiar o próprio futuro a essa pessoa.", "5": "Vocês se encontraram para aprender uma com a outra. O Hierofante no alto mostra que a relação é inspirada por valores em comum e por um senso de propósito. Talvez o encontro tenha vindo pelos estudos, pela fé, pelo trabalho ou por uma causa compartilhada, e a sensação de acreditar nas mesmas coisas foi boa parte da primeira conexão.", "6": "Vocês se encontraram porque o coração de vocês fez a escolha. Os Enamorados no alto mostram que a relação foi movida pelo afeto e por uma afinidade forte: gostos parecidos, conversas fáceis, a sensação de que estar lado a lado era simplesmente certo.", "7": "Vocês se encontraram para seguir em frente lado a lado. O Carro no alto mostra que esta relação é inspirada por metas, viagens e conquistas. Talvez o encontro tenha acontecido numa mudança de vida, numa viagem ou numa fase de ambição, e a sensação de estar indo para algum lugar a dois fez parte da faísca.", "8": "Vocês se encontraram porque cada pessoa achou na outra uma parceria justa. A Justiça no alto mostra que a relação foi movida pelo respeito, pela honestidade e por um senso de equilíbrio. Desde o início provavelmente houve clareza entre vocês, uma ausência de joguinhos que trouxe alívio.", "9": "Vocês se encontraram para entender a vida com mais profundidade. O Eremita no alto mostra que a relação é inspirada por uma busca interior. Talvez o encontro tenha acontecido num momento de reflexão, ou cada pessoa tenha reconhecido na outra o mesmo jeito de olhar por baixo da superfície das coisas.", "10": "Vocês se encontraram num ponto de virada. A Roda da Fortuna no alto mostra que o próprio encontro foi uma mudança de destino: provavelmente vocês se aproximaram numa fase em que a vida estava se transformando, e a relação acelerou essa mudança para as duas pessoas.", "11": "Vocês se encontraram para se fortalecer. A Força no alto mostra que esta relação é inspirada pela coragem, pela paixão e pela resiliência. Algo no primeiro encontro deu energia às duas pessoas, e desde o começo vocês provavelmente se sentiram com mais capacidade e mais vida.", "12": "Vocês se encontraram para ver a vida com outros olhos. O Enforcado no alto mostra que a relação foi movida por uma mudança de perspectiva. A convivência fez cada pessoa questionar o que acreditava e descobrir outros jeitos de viver, e essa virada continua sendo uma das coisas mais preciosas que vocês compartilham.", "13": "Vocês se encontraram para se transformar. A Transformação no alto mostra que a relação nasceu durante uma grande mudança, ou por causa dela: um encerramento na vida de uma das pessoas que abriu espaço para algo novo. Desde o início, este vínculo teve o poder de renovar.", "14": "Vocês se encontraram para levar equilíbrio à vida das duas pessoas. A Temperança no alto mostra que a relação é inspirada pela harmonia e pela cura. Provavelmente, desde o começo, a companhia trouxe mais calma e mais centro, como se algo por dentro finalmente tivesse assentado.", "15": "Vocês se encontraram porque havia uma força grande entre vocês. O Diabo no alto mostra que a relação é inspirada pela intensidade e por um apetite em comum pela vida. Houve algo poderoso no primeiro encontro, uma força que puxava uma pessoa para a outra e que não dava para ignorar.", "16": "Vocês se encontraram para se libertar. A Torre no alto mostra que o encontro abriu algo na vida das duas pessoas. A relação provavelmente chegou de repente e mudou planos, rotinas ou crenças que até então pareciam sólidos.", "17": "Vocês se encontraram para se inspirar mutuamente. A Estrela no alto mostra que esta relação foi movida pela esperança e pela admiração. Cada pessoa viu na outra uma luz, um talento ou uma beleza que fez a vida parecer um pouco mais digna de fé.", "18": "Vocês se encontraram por uma conexão profunda, quase misteriosa. A Lua no alto mostra que a relação foi movida pela intuição e pela emoção. Provavelmente houve uma sensação de familiaridade, um reconhecimento quase de sonho, mais forte do que qualquer motivo racional.", "19": "Vocês se encontraram para iluminar a vida das duas pessoas. O Sol no alto mostra que a relação é inspirada pela alegria, pelo calor e pela vitalidade. Desde o começo, a companhia trouxe mais felicidade, mais confiança e mais abertura para as duas pessoas.", "20": "Vocês se encontraram porque a vida chamou para um novo capítulo. O Julgamento no alto mostra que a relação nasceu como um despertar: uma renovação para as duas pessoas e, muitas vezes, uma virada na história das duas famílias.", "21": "Vocês se encontraram para ampliar o mundo das duas pessoas. O Mundo no alto mostra que esta relação é inspirada pela abertura e pela completude. Provavelmente houve desde o início a sensação de estar por inteiro, e o encontro abriu horizontes para as duas pessoas: lugares novos, gente nova, possibilidades novas.", "22": "Vocês se encontraram para viver com mais liberdade. O Louco no alto mostra que a relação foi movida pela espontaneidade e pela aventura. O próprio encontro talvez tenha sido inesperado, quase por acaso, e a leveza desse começo continua no coração do que vocês compartilham."}, "love": {}},
+  papeis:['core','met'],
+  legenda:[['core','Energia central'],['met','Por que se cruzaram'],['lock','Na leitura completa']],
+  terceiro:function(A,B,cas,u){
+    const um=(pes,r,rot)=>{
+      const L=lerCauda(r), frase=(L.arq[1].match(/^.*?[.!?](\s|$)/)||[L.arq[1]])[0].trim();
+      return '<div class="cp-karma">'+
+        '<p class="cp-kq">'+(pes.primeiro? u.esc(pes.primeiro) : rot)+'</p>'+
+        '<p class="cp-kn">'+u.esc(L.arq[0])+' <span>'+L.codigo+'</span></p>'+
+        '<p>'+u.esc(frase)+'</p></div>';
+    };
+    return '<div class="lblock">'+
+      '<p class="lz">Os karmas que cada pessoa traz · a cauda kármica de cada mapa</p>'+
+      '<div class="cp-karmas">'+um(A,cas.p,'Você')+um(B,cas.q,'A outra pessoa')+'</div>'+
+      u.borrao(2)+'<p class="cp-segue">Na leitura completa, a história de cada cauda e o que ela desperta dentro da relação.</p></div>';
+  },
+  trancados:function(r){
+    return [
+      {z:'Como a outra pessoa enxerga você', s:'O jeito como cada pessoa é vista pela outra'},
+      {z:'O conselho para o casal', s:'O que a matriz pede do casal a partir de agora'}
+    ];
+  },
+  chamado:function(A,B,cas,par,u){
+    const p=(typeof PRODUTOS!=='undefined'&&PRODUTOS.find(x=>/Matriz do Amor/i.test(x.nome)))||{};
+    const preco=p.preco||'R$ 69,90', itens=p.itens||[];
+    const dt=x=>(x.primeiro? x.primeiro+' ' : '')+String(x.d).padStart(2,'0')+'/'+String(x.m).padStart(2,'0')+'/'+x.y;
+    const msg='Oi! Fiz a compatibilidade no site ('+dt(A)+' e '+dt(B)+', energia central '+cas.r.centro+') e quero a Matriz do Amor Completa ❤️';
+    return '<div class="chamado">'+
+      '<p class="ce">Até aqui é a prévia</p>'+
+      '<h3>'+(par? par+', a leitura completa de vocês' : 'A leitura completa do casal')+'</h3>'+
+      '<p class="cl">A Matriz do Amor Completa lê a relação mapa a mapa: os dois mapas individuais e a matriz do casal, escritos para vocês.</p>'+
+      (itens.length?'<ul>'+itens.map(i=>'<li>'+i+'</li>').join('')+'</ul>':'')+
+      '<div class="cta-row">'+
+        '<a class="cta" href="'+waLink(msg)+'" target="_blank" rel="noopener">Quero a leitura completa · '+preco+'</a>'+
+        '<a class="cta ghost" href="#catalogo">Ver as outras leituras</a>'+
+      '</div>'+
+      '<p class="cp-nota">Pronta em 1 a 2 dias · PDF pelo WhatsApp</p>'+
+    '</div>';
+  }
+}
+;
+const T = CFG.t, TX = CFG.teaser;
+const $ = id => document.getElementById(id);
+if (!$('cpBox') || typeof calcular !== 'function') return;
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const nomeArc = n => (ARCANOS[n] ? ARCANOS[n][0] : '');
+
+/* ---- formulário ---- */
+function opcoes(id, ph, itens){
+  const s = $(id);
+  s.innerHTML = '<option value="" disabled selected>'+ph+'</option>' +
+    itens.map(([v,t]) => '<option value="'+v+'">'+t+'</option>').join('');
+}
+const faixa = (a,b) => { const r=[]; for(let i=a;i<=b;i++) r.push(i); return r; };
+const anoAtual = new Date().getFullYear();
+['a','b'].forEach(p => {
+  opcoes('cp'+p+'d', T.dia,  faixa(1,31).map(i => [i, String(i).padStart(2,'0')]));
+  opcoes('cp'+p+'m', T.mes,  faixa(1,12).map(i => [i, T.meses[i-1]]));
+  opcoes('cp'+p+'y', T.ano,  faixa(1920,anoAtual).reverse().map(i => [i, i]));
+});
+
+/* quem já calculou o próprio mapa não precisa digitar de novo */
+function herdar(){
+  const d=$('dia'), m=$('mes'), y=$('ano'), n=$('nome');
+  if (!d || !$('result') || !$('result').classList.contains('show')) return;
+  if (!$('cpad').value) $('cpad').value = d.value;
+  if (!$('cpam').value) $('cpam').value = m.value;
+  if (!$('cpay').value) $('cpay').value = y.value;
+  if (n && !$('cpan').value) $('cpan').value = n.value.trim();
+}
+if ($('go')) $('go').addEventListener('click', () => setTimeout(herdar, 120));
+
+function lerPessoa(p){
+  const d=+$('cp'+p+'d').value, m=+$('cp'+p+'m').value, y=+$('cp'+p+'y').value;
+  const nome=$('cp'+p+'n').value.trim();
+  return {d, m, y, nome, primeiro: nome.split(/\s+/)[0] || ''};
+}
+
+/* ---- motor do casal ---- */
+function calcCasal(a, b){
+  const p=calcular(a.d,a.m,a.y), q=calcular(b.d,b.m,b.y);
+  const s=(x,z)=>reduzir(x+z);
+  const C0=s(p.centro,q.centro);
+  const arm=t=>{ const inner=reduzir(C0+t); return {tip:t, inner, outer:reduzir(inner+t)}; };
+  const r={D:s(p.D,q.D), M:s(p.M,q.M), A:s(p.A,q.A), SUM:s(p.SUM,q.SUM), centro:C0};
+  r.W=arm(r.D); r.N=arm(r.M); r.E=arm(r.A); r.S=arm(r.SUM);
+  r.NW=arm(s(p.NW,q.NW)); r.NE=arm(s(p.NE,q.NE));
+  r.SE=arm(s(p.SE,q.SE)); r.SW=arm(s(p.SW,q.SW));
+  r.mid=reduzir(r.E.inner+r.S.inner);
+  r.money=reduzir(r.E.inner+r.mid);
+  r.love=reduzir(r.mid+r.S.inner);
+  return {r, p, q};
+}
+
+/* ---- octograma do casal ---- */
+const COR = {
+  core:  {f:'#5B2E8C', t:'#FFFFFF'},
+  met:   {f:'#2E5F8C', t:'#FFFFFF'},
+  love:  {f:'#DD5F95', t:'#FFFFFF'},
+  money: {f:'#4E8C6A', t:'#FFFFFF'},
+  lock:  {f:'#E6DAF5', t:'#5B2E8C'}
+};
+function desenhar(svg, r){
+  svg.innerHTML = '';
+  const C=[CX,CY], at=(d,f)=>lerp(C,P[d],f), put=e=>{svg.appendChild(e); return e;};
+  const linha='stroke:rgba(91,46,140,.28);stroke-width:1.2;fill:none';
+  put(el('circle',{cx:CX,cy:CY,r:292,style:'fill:none;stroke:rgba(221,95,149,.28);stroke-width:1.2'}));
+  put(el('polygon',{points:['W','NW','N','NE','E','SE','S','SW'].map(k=>P[k].join(',')).join(' '),style:linha}));
+  put(el('polygon',{points:['N','E','S','W'].map(k=>P[k].join(',')).join(' '),style:'stroke:rgba(91,46,140,.45);stroke-width:1.6;fill:none'}));
+  put(el('polygon',{points:['NW','NE','SE','SW'].map(k=>P[k].join(',')).join(' '),style:'stroke:rgba(201,151,74,.6);stroke-width:1.4;fill:none'}));
+  ['N','E','S','W','NW','NE','SE','SW'].forEach(k=>put(el('line',{x1:CX,y1:CY,x2:P[k][0],y2:P[k][1],style:linha})));
+  const eIn=at('E',F_IN), sIn=at('S',F_IN);
+  put(el('line',{x1:eIn[0],y1:eIn[1],x2:sIn[0],y2:sIn[1],style:'stroke:rgba(176,69,122,.45);stroke-width:1.4;stroke-dasharray:3 4;fill:none'}));
+
+  const papel = CFG.papeis;   /* quais pontos aparecem destacados nesta prévia */
+  const nos = [];
+  const no = (pos, val, raio, chave) => nos.push({pos, val, raio, chave});
+  no(C, r.centro, 30, 'core');
+  [['N',r.N,'met'],['E',r.E],['S',r.S],['W',r.W],['NW',r.NW],['NE',r.NE],['SE',r.SE],['SW',r.SW]].forEach(([d,a,k])=>{
+    no(at(d,F_TIP), a.tip, 23, k||'');
+    no(at(d,F_OUT), a.outer, 16, '');
+    no(at(d,F_IN),  a.inner, 12.5, '');
+  });
+  no(lerp(eIn,sIn,.25), r.money, 15, 'money');
+  no(lerp(eIn,sIn,.50), r.mid,  11.5, '');
+  no(lerp(eIn,sIn,.75), r.love, 15, 'love');
+
+  nos.forEach((n,i) => {
+    const c = COR[papel.includes(n.chave) ? n.chave : 'lock'];
+    const g = put(el('g',{class:'cp-no',style:'animation-delay:'+(0.15+i*0.025).toFixed(2)+'s'}));
+    g.appendChild(el('circle',{cx:n.pos[0],cy:n.pos[1],r:n.raio,style:'fill:'+c.f+';stroke:#FFFDF8;stroke-width:1.6'}));
+    const t = el('text',{x:n.pos[0],y:n.pos[1]+0.5,style:'fill:'+c.t+';font-family:Jost,system-ui,sans-serif;font-weight:500;font-size:'+Math.round(n.raio*0.85)+'px;text-anchor:middle;dominant-baseline:central'});
+    t.textContent = n.val; g.appendChild(t);
+  });
+  /* $ e coração ao lado da linha */
+  const m$ = lerp(C, lerp(eIn,sIn,.25), 1.36), mL = lerp(C, lerp(eIn,sIn,.75), 1.36);
+  const s1 = put(el('text',{x:m$[0],y:m$[1],style:'fill:#4E8C6A;font-family:Jost,sans-serif;font-weight:600;font-size:20px;text-anchor:middle;dominant-baseline:central'})); s1.textContent='$';
+  const s2 = put(el('text',{x:mL[0],y:mL[1],style:'fill:#DD5F95;font-size:17px;text-anchor:middle;dominant-baseline:central'})); s2.textContent='❤';
+}
+
+/* ---- prévia ---- */
+const borrao = n => '<div class="cp-borrao" aria-hidden="true">'+'<i></i>'.repeat(n)+'</div>';
+const cadeado = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 7V5a3.5 3.5 0 017 0v2h.5A1 1 0 0113 8v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1zm1.5 0h4V5a2 2 0 00-4 0z"/></svg>';
+
+function bloco(lz, val, texto, extra, destaque){
+  return '<div class="lblock'+(destaque?' destaque':'')+'">'+
+    '<p class="lz">'+lz+'</p>'+
+    '<div class="lh">'+val+' · '+esc(nomeArc(val))+'</div>'+
+    '<p>'+esc(texto)+'</p>'+(extra||'')+'</div>';
+}
+
+function trancado(it){
+  let num='';
+  if (Array.isArray(it.v)) num = '<span class="cp-tn">'+it.v.join(it.sep||' · ')+'</span>';
+  else if (it.v) num = '<span class="cp-tn">'+it.v+'</span><span class="cp-ta">'+esc(nomeArc(it.v))+'</span>';
+  return '<div class="cp-tranca">'+
+    '<p class="cp-tz">'+it.z+'</p>'+
+    (num ? '<p class="cp-tv">'+num+'</p>' : '')+
+    '<p class="cp-ts">'+it.s+'</p>'+borrao(3)+
+    '<p class="cp-tl">'+cadeado+T.naCompleta+'</p></div>';
+}
+
+function previa(A, B, cas){
+  const r = cas.r;
+  const par = (A.primeiro && B.primeiro) ? esc(A.primeiro)+' &amp; '+esc(B.primeiro) : '';
+  let h = '<div class="cp-head">'+
+    '<p class="sec-eyebrow">'+T.previaEyebrow+'</p>'+
+    '<h3 class="cp-titulo">'+(par ? T.tituloCom.replace('{par}', par) : T.titulo)+'</h3>'+
+    '<p class="cp-datas-txt">'+fmt(A)+' &nbsp;+&nbsp; '+fmt(B)+'</p></div>';
+
+  h += '<div class="cp-chart"><svg id="cpSvg" viewBox="40 50 600 600" role="img" aria-label="'+T.svgAria+'"></svg></div>';
+  h += '<div class="cp-legenda">'+CFG.legenda.map(([k,t])=>'<span><i style="background:'+COR[k].f+'"></i>'+t+'</span>').join('')+'</div>';
+  h += '<p class="cp-hint">'+T.hint+'</p>';
+
+  h += '<div class="cp-blocos">';
+  h += bloco(T.lzCore, r.centro, TX.core[r.centro], '', true);
+  h += bloco(T.lzMet, r.M, TX.met[r.M]);
+  h += CFG.terceiro(A, B, cas, {bloco, borrao, esc, nomeArc});
+  h += '</div>';
+
+  const tr = CFG.trancados(r);
+  if (tr.length){
+    h += '<div class="cp-mais"><p class="sec-eyebrow">'+T.maisEyebrow+'</p>'+
+      '<div class="cp-trancas">'+tr.map(trancado).join('')+'</div></div>';
+  }
+  h += CFG.chamado(A, B, cas, par, {esc});
+  return h;
+}
+
+function fmt(p){
+  const d = String(p.d).padStart(2,'0')+'/'+String(p.m).padStart(2,'0')+'/'+p.y;
+  return (p.nome ? '<b>'+esc(p.nome)+'</b> · ' : '')+d;
+}
+
+$('cpGo').addEventListener('click', () => {
+  const err = $('cpErr');
+  const A = lerPessoa('a'), B = lerPessoa('b');
+  if (!A.d || !A.m || !A.y || !B.d || !B.m || !B.y){ err.textContent = T.errFalta; return; }
+  for (const [p,rot] of [[A,T.pessoaA],[B,T.pessoaB]]){
+    const dim = new Date(p.y, p.m, 0).getDate();
+    if (p.d > dim){ err.textContent = T.errDia.replace('{quem}', p.nome || rot).replace('{n}', dim); return; }
+  }
+  err.textContent = '';
+  const cas = calcCasal(A, B);
+  const box = $('cpResult');
+  box.innerHTML = previa(A, B, cas);
+  desenhar($('cpSvg'), cas.r);
+  box.classList.add('show');
+  setTimeout(() => box.scrollIntoView({behavior:'smooth', block:'start'}), 80);
+});
+
+window._cpCalcCasal = calcCasal;   /* usado só nos testes */
+})();
 </script>
 </body>
 </html>
