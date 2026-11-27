@@ -472,6 +472,25 @@
     .cp-e{justify-self:center; font-size:34px;}
     .cp-karmas{grid-template-columns:1fr;}
   }
+
+  /* ===== SEÇÃO PONTO ESTELAR ===== */
+  .pe-novo{display:inline-block; margin:0 0 12px; font-family:"Jost",system-ui,sans-serif; font-size:11px; font-weight:500; letter-spacing:.2em;
+    text-transform:uppercase; color:#fff; background:var(--violet); border-radius:999px; padding:6px 13px}
+  #pe-frame{display:block; width:100%; height:560px; border:0; background:transparent; transition:height .35s ease}
+  .pe-inc{display:none; margin-top:22px; padding:clamp(22px,4vw,34px); border-radius:var(--r); background:linear-gradient(135deg,var(--cream),var(--lav) 60%,var(--rose-pale));
+    border:1px solid var(--line-forte)}
+  #ponto-estelar.aberta .pe-inc{display:block; animation:peIn .6s ease}
+  @keyframes peIn{from{opacity:0; transform:translateY(14px)} to{opacity:1; transform:none}}
+  .pe-inc h3{font-family:"Playfair Display",Georgia,serif; font-style:italic; font-weight:700; font-size:clamp(22px,3vw,28px); margin:0 0 14px; color:var(--ink)}
+  .pe-inc ul{list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(2,1fr); gap:10px 24px}
+  .pe-inc li{display:flex; gap:10px; font-family:"Jost",system-ui,sans-serif; font-size:15.5px; line-height:1.45; color:var(--ink)}
+  .pe-inc li:before{content:'✦'; color:var(--rose); flex:none}
+  .pe-ctas{display:flex; flex-wrap:wrap; gap:14px; align-items:center; margin-top:22px}
+  .pe-btn{display:inline-block; font-family:"Jost",system-ui,sans-serif; font-weight:500; letter-spacing:.04em; font-size:15px;
+    background:var(--violet); color:#fff; border-radius:999px; padding:13px 26px; text-decoration:none; transition:transform .2s, background .2s}
+  .pe-btn:hover{background:var(--rose); transform:translateY(-2px)}
+  .pe-link{font-family:"Jost",system-ui,sans-serif; font-size:14px; color:var(--violet)}
+  @media(max-width:640px){ .pe-inc ul{grid-template-columns:1fr} #pe-frame{margin:0 -10px; width:calc(100% + 20px)} }
 </style>
 <script type="application/ld+json" data-seo>[{"@context": "https://schema.org", "@type": "WebSite", "name": "Matriz do Destino", "url": "https://matrixdodestino.com/", "description": "Calculadora gratuita da Matriz do Destino: desenhe o seu mapa pela data de nascimento e veja uma prévia de cada zona, da cauda kármica ao amor e ao dinheiro. Leituras completas em PDF."}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "A leitura é a mesma que aparece aqui no site?", "acceptedAnswer": {"@type": "Answer", "text": "Não. O que o site entrega é o significado geral de cada arcano do seu mapa, uma prévia. A leitura completa é escrita a partir da sua combinação específica, com os arcanos conversando entre si, e cada seção tem várias vezes o tamanho do que você lê aqui."}}, {"@type": "Question", "name": "Preciso saber a hora do nascimento?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Diferente do mapa astral, a Matriz do Destino é calculada apenas com o dia, o mês e o ano. Só isso já basta para desenhar o mapa inteiro."}}, {"@type": "Question", "name": "Em quanto tempo eu recebo?", "acceptedAnswer": {"@type": "Answer", "text": "De um a dois dias depois da confirmação. Cada leitura é escrita e conferida uma a uma, a partir do mapa que a sua data desenhou. Em períodos de muitos pedidos eu aviso o prazo antes de você fechar, para não haver surpresa."}}, {"@type": "Question", "name": "Serve para quem não entende nada de tarô?", "acceptedAnswer": {"@type": "Answer", "text": "Serve, e é para isso que é escrita assim. Cada arcano é apresentado pelo nome e explicado em linguagem comum, sem jargão. Você não precisa saber nada antes de começar a ler."}}, {"@type": "Question", "name": "Como funciona a Matriz do Ano 2027?", "acceptedAnswer": {"@type": "Answer", "text": "Ela parte do mesmo mapa, mas olha só para o arcano que rege o seu 2027, aquele que corresponde à idade que você terá durante a maior parte do ano. A leitura mostra o que essa energia pede, como ela aparece no trabalho e no amor, e o que fazer na prática para aproveitar o ciclo."}}, {"@type": "Question", "name": "Posso pedir a leitura de outra pessoa?", "acceptedAnswer": {"@type": "Answer", "text": "Pode, e é um presente que costuma agradar bastante. Só preciso do nome e da data de nascimento de quem vai receber."}}, {"@type": "Question", "name": "Isso substitui terapia ou orientação profissional?", "acceptedAnswer": {"@type": "Answer", "text": "Não. A leitura é uma ferramenta de autoconhecimento e reflexão, feita para ajudar você a olhar para a própria história com outros olhos. Ela não substitui acompanhamento psicológico, médico, jurídico ou financeiro."}}]}]</script>
 </head>
@@ -492,6 +511,7 @@
       <a href="#comofunciona" class="opcional">Como funciona</a>
       <a href="#compatibilidade" class="opcional">Compatibilidade</a>
       <a href="#catalogo">Leituras</a>
+      <a href="#ponto-estelar" class="opcional" style="color:var(--rose)">✦ Ponto Estelar</a>
       <a href="#" class="nav-cta" id="navCta" target="_blank" rel="noopener">Falar comigo</a>
     </nav>
   </div>
@@ -679,6 +699,28 @@
       <button class="seta pro" type="button" data-pista="vitrine" data-dir="1" aria-label="Ver próximas leituras">&#8594;</button>
     </div>
     <p class="pista-dica"><b>&#8596;</b> Arraste para o lado</p>
+  </section>
+
+  <!-- ============ PONTO ESTELAR ============ -->
+  <section class="sec" id="ponto-estelar">
+    <div class="sec-head">
+      <span class="pe-novo">✦ Novo · Ponto Estelar</span>
+      <h2 class="sec-title">Para onde as suas <span class="acento">estrelas</span> querem te levar?</h2>
+      <p class="sub">No instante em que você nasceu, cada planeta estava sobre um ponto exato da Terra. Coloque seus dados de nascimento e veja a sua primeira linha planetária no mapa-múndi, de graça.</p>
+    </div>
+    <iframe id="pe-frame" src="ponto-estelar-mapa.html" title="Prévia grátis do mapa do Ponto Estelar" loading="lazy"></iframe>
+    <div class="pe-inc">
+      <h3>O que vem no seu mapa completo</h3>
+      <ul>
+        <li>Todas as 40 linhas planetárias do seu mapa desenhadas no mapa-múndi</li>
+        <li>A sua cidade da alma, onde as linhas mais generosas do seu céu se encontram</li>
+        <li>Mais de 500 cidades em 141 países, com a sua compatibilidade em %</li>
+        <li>Onde você pode encontrar o amor, fazer o dinheiro crescer e se sentir em casa</li>
+        <li>11 temas da vida: amor, carreira, criatividade, cura e mais</li>
+        <li>Uma leitura para cada cidade que você tocar no mapa</li>
+      </ul>
+      <div class="pe-ctas"><a class="pe-btn" href="https://go.hotmart.com/X106966830B">Quero meu mapa completo · R$ 49,90</a><a class="pe-link" href="https://pontoestelar.com.br">Conhecer o Ponto Estelar →</a></div>
+    </div>
   </section>
 
   <!-- ============ COMBINAÇÕES ============ -->
@@ -1887,6 +1929,14 @@ $('cpGo').addEventListener('click', () => {
 });
 
 window._cpCalcCasal = calcCasal;   /* usado só nos testes */
+})();
+</script>
+
+<script>
+(function(){ var f=document.getElementById('pe-frame'); if(!f) return;
+  window.addEventListener('message',function(e){ if(e.source!==f.contentWindow || !e.data) return;
+    if(e.data.pvH) f.style.height=Math.max(380,e.data.pvH)+'px';
+    if(e.data.pvOpen){ var sc=document.getElementById('ponto-estelar'); if(sc) sc.classList.add('aberta'); } });
 })();
 </script>
 </body>
